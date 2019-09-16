@@ -4,8 +4,8 @@
 {% for _ in cookiecutter.project_name %}={% endfor %}
 
 {%- if is_open_source %}
-.. image:: `pypi-shield`_
-        :target: `pypi-target`_
+.. image:: https://img.shields.io/pypi/v/{{ cookiecutter.project_slug }}.svg
+        :target: https://pypi.python.org/pypi/{{ cookiecutter.project_slug }}
 
 .. image:: `travis-shield`_
         :target: `travis-target`_
@@ -16,8 +16,8 @@
 {%- endif %}
 
 {%- if cookiecutter.add_pyup_badge == 'y' %}
-.. image:: `pyup-shield`_
-     :target: `pyup-target`_
+.. image:: https://pyup.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/shield.svg
+     :target: https://pyup.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/
      :alt: Updates
 {%- endif %}
 
@@ -25,16 +25,8 @@
 
 {%- if is_open_source %}
 * Free software: {{ cookiecutter.open_source_license }}
-* Documentation: `readthedocs-target`_.
+* Documentation: https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io.
 {%- endif %}
-
-Table of Contents
------------------
-
-- `Table of Contents`_
-- `Features`_
-- `Development`_
-- `Credits`_
 
 Features
 --------
