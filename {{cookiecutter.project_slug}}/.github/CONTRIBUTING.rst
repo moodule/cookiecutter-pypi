@@ -64,18 +64,9 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.project_slug }}` for 
 
     $ git clone git@github.com:your_name_here/{{ cookiecutter.project_slug }}.git
 
-{%- if cookiecutter.use_pipenv == 'y' %}
-3. Assuming you have pipenv installed, you can **create a new environment with all the dependencies** by typing::
+3. Assuming you have poetry installed, you can **create a new environment with all the dependencies** by typing::
 
-    $ make init
-    $ pipenv shell
-{%- else %}
-3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
-
-    $ mkvirtualenv {{ cookiecutter.project_slug }}
-    $ cd {{ cookiecutter.project_slug }}/
-    $ python setup.py develop
-{%- endif %}
+    $ make install
 
 4. Create a branch for local development::
 
@@ -91,7 +82,7 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.project_slug }}` for 
     Or
     $ make test-all
 
-   To get flake8 and tox, just pip install them into your virtualenv.
+   To get flake8 and tox, just ``poetry add`` them into your virtualenv.
 
 6. Commit your changes and push your branch to GitHub::
 
@@ -148,11 +139,9 @@ Tips
 
 To run a subset of tests::
 
-{% if cookiecutter.use_pytest == 'y' -%}
-    $ pytest tests.test_{{ cookiecutter.project_slug }}
-{% else %}
-    $ python -m unittest tests.test_{{ cookiecutter.project_slug }}
-{%- endif %}
+    $ make test
+    Equivalent to:
+    $ poetry run python -m unittest
 
 Deploying
 ---------

@@ -14,16 +14,15 @@ Cookiecutter PyPackage
     :target: https://cookiecutter-pypackage.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
-Cookiecutter_ template for a Python package.
+Cookiecutter_ template for a Python package. Light, tidy and up-to-date!
 
-* GitHub repo: https://github.com/audreyfeldroy/cookiecutter-pypackage/
-* Documentation: https://cookiecutter-pypackage.readthedocs.io/
-* Free software: BSD license
+* Repository: https://github.com/moodule/cookiecutter-pypi/
+* License: MIT
 
 Features
 --------
 
-* Testing setup with ``unittest`` and ``python setup.py test`` or ``pytest``
+* Testing setup with ``unittest``
 * Travis-CI_: Ready for Travis Continuous Integration testing
 * Tox_ testing: Setup to easily test for Python 3.5, 3.6, 3.7, 3.8
 * Sphinx_ docs: Documentation ready for generation with, for example, `Read the Docs`_
@@ -38,14 +37,14 @@ Build Status
 
 Linux:
 
-.. image:: https://img.shields.io/travis/audreyfeldroy/cookiecutter-pypackage.svg
-    :target: https://travis-ci.org/audreyfeldroy/cookiecutter-pypackage
+.. image:: https://img.shields.io/travis/moodule/cookiecutter-pypackage.svg
+    :target: https://travis-ci.org/moodule/cookiecutter-pypackage
     :alt: Linux build status on Travis CI
 
 Windows:
 
-.. image:: https://ci.appveyor.com/api/projects/status/github/audreyr/cookiecutter-pypackage?branch=master&svg=true
-    :target: https://ci.appveyor.com/project/audreyr/cookiecutter-pypackage/branch/master
+.. image:: https://ci.appveyor.com/api/projects/status/github/moodule/cookiecutter-pypackage?branch=master&svg=true
+    :target: https://ci.appveyor.com/project/moodule/cookiecutter-pypackage/branch/master
     :alt: Windows build status on Appveyor
 
 Quickstart

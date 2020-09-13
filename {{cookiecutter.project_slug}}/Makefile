@@ -55,27 +55,18 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr .tox/
 	rm -f .coverage
 	rm -fr htmlcov/
-	rm -fr .pytest_cache
 
 lint: ## check style with flake8
 	$(ENVIRONMENT) flake8 {{ cookiecutter.project_slug }} tests
 
 test: ## run tests quickly with the default Python
-{%- if cookiecutter.use_pytest == 'y' %}
-	$(ENVIRONMENT) pytest
-{%- else %}
 	$(ENVIRONMENT) python -m unittest
-{%- endif %}
 
 test-all: ## run tests on every Python version with tox
 	$(ENVIRONMENT) tox
 
 coverage: ## check code coverage quickly with the default Python
-{%- if cookiecutter.use_pytest == 'y' %}
-	$(ENVIRONMENT) coverage run --source {{ cookiecutter.project_slug }} -m pytest
-{%- else %}
 	$(ENVIRONMENT) coverage run --source {{ cookiecutter.project_slug }} setup.py test
-{%- endif %}
 	$(ENVIRONMENT) coverage report -m
 	$(ENVIRONMENT) coverage html
 	$(ENVIRONMENT) (BROWSER) htmlcov/index.html
