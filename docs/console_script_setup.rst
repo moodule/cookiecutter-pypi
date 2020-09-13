@@ -9,9 +9,8 @@ Optionally, your package can include a console script using Click or argparse (P
 How It Works
 ------------
 
-If the 'command_line_interface' option is set to ['click'] or ['argparse'] during setup, cookiecutter will
-add a file 'cli.py' in the project_slug subdirectory. An entry point is added to
-setup.py that points to the main function in cli.py.
+Cookiecutter will add a file '__main__.py' in the project_slug subdirectory,
+pointing to the main function.
 
 Usage
 ------------
@@ -19,7 +18,8 @@ To use the console script in development:
 
 .. code-block:: bash
 
-    pip install -e projectdir
+    $ cd projectdir
+    $ poetry install
 
 'projectdir' should be the top level project directory with the setup.py file
 
@@ -27,25 +27,6 @@ The script will be generated with output for no arguments and --help.
 
 --help
     show help menu and exit
-
-Known Issues
-------------
-Using Click, installing the project in a development environment using:
-
-.. code-block:: bash
-
-    python setup.py develop
-
-will not set up the entry point correctly. This is a known issue with Click.
-The following will work as expected:
-
-.. code-block:: bash
-
-    python setup.py install
-    pip install mypackage
-
-With 'mypackage' adjusted to the specific project.
-
 
 More Details
 ------------
