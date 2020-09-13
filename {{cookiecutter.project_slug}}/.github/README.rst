@@ -7,9 +7,6 @@
 .. image:: `pypi-shield`_
         :target: `pypi-target`_
 
-.. image:: `travis-shield`_
-        :target: `travis-target`_
-
 .. image:: `readthedocs-shield`_
         :target: `readthedocs-target`_
         :alt: Documentation Status
@@ -67,8 +64,6 @@ This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypack
 .. _`pyup-target`: https://pyup.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/
 .. _`readthedocs-shield`: https://readthedocs.org/projects/{{ cookiecutter.project_slug | replace("_", "-") }}/badge/?version=latest
 .. _`readthedocs-target`: https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io/en/latest/
-.. _`travis-shield`: https://img.shields.io/travis/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.svg
-.. _`travis-target`: https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
 
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
 .. _`code of conduct`: CODE_OF_CONDUCT.rst
